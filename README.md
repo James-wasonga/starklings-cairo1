@@ -28,15 +28,19 @@ With rustup
 curl https://sh.rustup.rs -sSf | sh -s
 ```
 
-1. Clone the repo and go in the directory,
+1. Clone the repo ,
    ```
    git clone https://github.com/shramee/starklings-cairo1.git && cd starklings-cairo1
    ```
-2. Run starklings (this might take a while the first time),
+2. Go in the directory
+     ```
+   cd starklings-cairo1
+   ```
+3. Run starklings (this might take a while the first time),
    ```sh
    cargo run -r --bin starklings
    ```
-3. You should see an intro message, when you are ready run starklings in watch mode,
+4. You should see an intro message, when you are ready run starklings in watch mode,
    ```sh
    cargo run -r --bin starklings watch
    ```
