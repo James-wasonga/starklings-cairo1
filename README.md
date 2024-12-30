@@ -28,9 +28,9 @@ With rustup
 curl https://sh.rustup.rs -sSf | sh -s
 ```
 
-1. Clone the repo ,
+1. Clone the repo
    ```
-   git clone https://github.com/shramee/starklings-cairo1.git && cd starklings-cairo1
+   git clone https://github.com/shramee/starklings-cairo1.git
    ```
 2. Go in the directory
      ```
