@@ -22,39 +22,55 @@
 
 ## Setup and run
 
+### 1. Install Rust
+
 Make sure you have Rust and Cargo installed with the `default` toolchain.  
-With rustup 
+
 ```sh
 curl https://sh.rustup.rs -sSf | sh -s
 ```
 
-1. Clone the repo
-   ```
-   git clone https://github.com/shramee/starklings-cairo1.git
-   ```
-2. Go in the directory
-     ```
-   cd starklings-cairo1
-   ```
-3. Run starklings (this might take a while the first time),
-   ```sh
-   cargo run -r --bin starklings
-   ```
-4. You should see an intro message, when you are ready run starklings in watch mode,
-   ```sh
-   cargo run -r --bin starklings watch
-   ```
+### 2. Clone the Repository
 
-## Start at a specific exercise `NEW`
-
-To start watch at a specific exercise pass the name of the exercise to watch command.
-For example, to start at `starknet1`,
-
+```sh
+git clone https://github.com/shramee/starklings-cairo1.git
 ```
+
+### 3. Navigate to the Directory
+
+```sh
+cd starklings-cairo1
+```
+
+### 4. Run Starklings
+
+Run the following command to start Starklings. The first run might take a while:
+
+```sh
+cargo run -r --bin starklings
+```
+
+### 5. Start Watch Mode
+
+Once you're ready, start Starklings in watch mode:
+
+```sh
+cargo run -r --bin starklings *watch*
+```
+
+---
+
+## Start at a Specific Exercise
+
+To begin with a specific exercise, pass its name to the `watch` command. For example, to start at `starknet1`:
+
+```sh
 cargo run -r --bin starklings watch starknet1
 ```
 
-## Welcome message and instructions
+---
+
+## Instructions and Welcome Message
 
 ```
 starklings - An interactive tutorial to get started with Cairo and Starknet
@@ -92,42 +108,34 @@ Got all that? Great! To get started, run `starklings watch` in order to get the
 first exercise. Make sure to have your editor open!
 ```
 
-## VSCode extension & language server
+---
 
-In order to have syntax highlighting and language server features, you will need to install the Cairo Language Server. The instructions available in the [Cairo repository](https://github.com/starkware-libs/cairo/tree/main/vscode-cairo)
+## VSCode Extension & Language Server
 
-## Inspiration
+For syntax highlighting and language server features, install the Cairo Language Server. Instructions are available in the [Cairo repository](https://github.com/starkware-libs/cairo/tree/main/vscode-cairo).
 
--   [Rustlings](https://github.com/rust-lang/rustlings), starklings is forked from Rustlings. Thanks to all the original [authors and contributors](https://github.com/rust-lang/rustlings)
+---
 
 ## Testing
 
-#### For Cairo related tests
+### For Cairo-related Tests
 
-```
+```sh
 cargo test cairo
 ```
 
-#### For all tests
+### For All Tests
 
-```
+```sh
 cargo test
 ```
 
+---
+
 ## Contributing
 
-Thanks for your interest in the project. You can fork the repo, create a branch with a descriptive name (maybe the issue number and a word or two to describe it) and submit a pull request.
+### Adding New Exercises
 
-### Adding new exercises
-
-#### Here's what an exercise looks like,
-1. An exercise is pretty much a single well commented Cairo file.
-2. Exercises are organised into modules and are placed in `./exercises/<module_name>/<exercise_name>.cairo`
-3. Exercise accompanies some metadata describing it in `./info.toml`
-4. When introducing a concept for the first time, try to start minimally.
-5. Subsequent exercises for the same concept can grow in complexity.
-
-#### Contributing with a new exercise
 1. Add the exercise file in the `./exercises` directory.
 2. Insert information about the exercise in `./info.toml` file. For example
     ```toml
@@ -150,5 +158,3 @@ cargo run -r --bin starklings run new_exercise
 
 1. [Test](#testing) your changes.
 2. Make sure you have solutions to all the exercises in `./solutions` directory.
-3. Run `cargo run -r --bin starklings compile_solutions` to confirm all exercise solutions still compile.
-4. Make your pull request.
